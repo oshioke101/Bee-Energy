@@ -549,3 +549,56 @@ img {
   height: 60px !important;
   object-fit: contain !important;
 }
+.clients-scroll-section,
+.partners-scroll-section {
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.section-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-track {
+  display: flex;
+  align-items: center;
+  gap: 70px;
+  width: max-content;
+  animation: scrollLogos 35s linear infinite;
+}
+
+.logo-track img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.logo-track img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.reverse-slider .logo-track {
+  animation-direction: reverse;
+}
+
+@keyframes scrollLogos {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
